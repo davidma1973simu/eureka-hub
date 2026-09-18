@@ -48,6 +48,43 @@
   .center{text-align:center}
   .center .lead{margin-left:auto;margin-right:auto}
 
+  /* 9-day assets */
+  .rowlist{display:flex;flex-direction:column;gap:10px}
+  .arow{background:#fff;border:1px solid var(--line);border-radius:12px;transition:.2s;overflow:hidden}
+  .arow:hover{border-color:var(--brand);box-shadow:0 6px 18px rgba(79,70,229,.10)}
+  .arow summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 20px}
+  .arow summary::-webkit-details-marker{display:none}
+  .aday{flex:0 0 auto;font-size:12px;font-weight:800;color:#fff;background:var(--brand);border-radius:999px;padding:4px 12px}
+  .atitle{font-size:16px;font-weight:700;flex:0 0 auto}
+  .awhere{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted)}
+  .awhere code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px;
+               background:#F3F4F6;border-radius:6px;padding:3px 8px;color:var(--ink)}
+  .aplus{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:#F3F4F6;color:var(--muted);
+         display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;transition:.2s}
+  .arow[open] .aplus{background:var(--brand);color:#fff;transform:rotate(45deg)}
+  .arow[open] summary{border-bottom:1px solid var(--line)}
+  .abody{padding:16px 20px 20px}
+  .ahow{font-size:13px;color:var(--muted);margin-bottom:2px}
+  .alabel{font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.5px;margin:14px 0 6px}
+  .acmd{display:block;width:100%;text-align:left;background:#F9FAFB;border:1px dashed var(--line);border-radius:10px;
+        padding:11px 13px;font-size:13.5px;line-height:1.6;color:var(--ink);cursor:pointer;transition:.2s;font-family:inherit}
+  .acmd:hover{border-color:var(--brand);background:#F5F6FF}
+  .copyhint{display:block;margin-top:6px;font-size:11px;color:var(--brand);font-weight:600}
+  .atpl{font-size:13.5px;color:#4338CA;background:#F5F3FF;border-left:3px solid var(--brand);
+        border-radius:0 8px 8px 0;padding:10px 12px;line-height:1.65}
+  .apractice{font-size:13.5px;color:var(--muted);line-height:1.65}
+  .aout{list-style:none;font-size:13.5px;color:var(--muted);line-height:1.75}
+  .aout li{padding-left:16px;position:relative}
+  .aout li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+  .btn-xhs{display:inline-block;background:#FF2442;color:#fff;font-weight:600;font-size:15px;
+           padding:13px 28px;border-radius:10px;transition:.2s;box-shadow:0 6px 18px rgba(255,36,66,.26)}
+  .btn-xhs:hover{background:#E01B37;transform:translateY(-1px)}
+  .assets-note{margin-top:28px;text-align:center;font-size:14px;color:var(--muted);line-height:2.2}
+  @media(max-width:720px){
+    .arow summary{flex-wrap:wrap;gap:8px}
+    .awhere{margin-left:0;width:100%}
+  }
+
   /* three layers */
   .layers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .layer{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;position:relative}
@@ -99,8 +136,11 @@
 
   footer{padding:40px 0;color:var(--muted);font-size:14px;text-align:center;border-top:1px solid var(--line)}
 
+  @media(max-width:1100px){
+    .assets{grid-template-columns:repeat(2,1fr)}
+  }
   @media(max-width:820px){
-    .layers,.grid2,.scen{grid-template-columns:1fr}
+    .assets,.layers,.grid2,.scen{grid-template-columns:1fr}
     .flow{grid-template-columns:repeat(2,1fr)}
     nav .links{display:none}
     section{padding:56px 0}
@@ -113,8 +153,10 @@
   <div class="wrap">
     <div class="logo">Eureka<span>.</span></div>
     <div class="links">
-      <a href="#stack">产品矩阵</a>
+      <a href="#assets">9 天资产</a>
+      <a href="#stack">产品系统</a>
       <a href="#coach">AI 教练</a>
+      <a href="#deliver">实体与服务</a>
       <a href="#rise">RISE 方法</a>
       <a href="#scene">适合谁</a>
     </div>
@@ -134,11 +176,247 @@
   </div>
 </header>
 
+<!-- ================= Eureka 价值创新资产（9 天 × 9 个 Skill） =================
+     小红书链接：下面每个 .axhs 的 href 目前统一指向小红书首页，
+     发布后可替换成对应某篇笔记的链接，或统一换成你的小红书主页。
+     ====================================================================== -->
+<section id="assets" class="alt">
+  <div class="wrap">
+    <div class="kicker">9-DAY ASSETS</div>
+    <h2>Eureka 价值创新资产</h2>
+    <p class="lead">9 天，9 个 Skill。每一站都给你一句能直接说的话、一个照抄就行的模板，和一份拿得出手的产出。跟着走完，你手里会有一份能落地的副业方案。<br><b>怎么用：每行右边就是它在 WorkBuddy 里的名字，搜一下就能调用</b>；点 ＋ 展开看具体话术与产出。</p>
+
+    <div class="rowlist">
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day1</span>
+          <span class="atitle">🧭 从痛点里挖方向</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-ideation</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="我想搞副业但没方向，帮我从「职场久坐人群」里挖 5 个能落地的选题，按值不值得做排序。">我想搞副业但没方向，帮我从「职场久坐人群」里挖 5 个能落地的选题，按值不值得做排序。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我想做______，但不知道选哪个切口，帮我从______人群里挖 5 个能落地的选题，按「值不值得做」排序。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">写下 3 个你或同事最常抱怨的场景，交给它变成 5 个方向。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>5–8 张选题卡（目标用户 / 痛点假设 / 机会窗口）</li>
+            <li>一张「值不值得做」排序表</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day2</span>
+          <span class="atitle">🔍 听懂用户的真话</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-insight</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="帮我设计一份 5 问访谈提纲，用 FIND 框架挖出「职场人午休为什么不运动」的真实需求。">帮我设计一份 5 问访谈提纲，用 FIND 框架挖出「职场人午休为什么不运动」的真实需求。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我要了解______用户在______场景下的真实想法，帮我设计访谈提纲，并提炼一句用户洞察（POV）。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">找 3 个目标用户各聊 10 分钟，把他们的原话贴给它提炼洞察。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>访谈提纲（开场白 + 追问链）</li>
+            <li>FIND 四层挖掘结果</li>
+            <li>一句话用户洞察 POV</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day3</span>
+          <span class="atitle">💡 突破桎梏的创意</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-inspire</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="基于这个用户洞察，用 NCO 帮我交叉生成 20 个解决方案，再筛选出最有戏的 Top 5。">基于这个用户洞察，用 NCO 帮我交叉生成 20 个解决方案，再筛选出最有戏的 Top 5。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我的用户洞察是：______。帮我交叉生成 20 个创意，用因果筛选留下最有戏的 Top 5。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">别急着挑最好的，先让它把 20 个全列出来，再一起筛。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>12–20 个创意清单</li>
+            <li>因果筛选过程与结果</li>
+            <li>Top 5 创意卡（亮点 + 风险）</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day4</span>
+          <span class="atitle">📐 做出最小可试版本</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-shape</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="把 Top1 创意做成 MVP，帮我做四维拷问，列出 P0/P1/P2 功能、用户流程和成功标准。">把 Top1 创意做成 MVP，帮我做四维拷问，列出 P0/P1/P2 功能、用户流程和成功标准。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我想做______（产品/服务），帮我做四维拷问，设计 MVP 核心功能、用户使用流程和成功标准。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">只保留 P0，其余全砍。两周内做不出来的，都不叫 MVP。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>四维拷问结论（价值 / 增长 / 技术 / 商业）</li>
+            <li>MVP 功能优先级 P0 / P1 / P2</li>
+            <li>用户流程图 + 可量化成功标准</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day5</span>
+          <span class="atitle">⚖️ 判断到底值不值得</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-value</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="用 AHA（用户价值）和 MAP（商业价值）评估这个方案，指出最致命的短板和补救方向。">用 AHA（用户价值）和 MAP（商业价值）评估这个方案，指出最致命的短板和补救方向。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我的方案是______，帮我用 AHA + MAP 双维打分，指出最致命的短板和补救方向。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">如果说不出用户的「高光时刻」，说明价值还没立住，先别往下走。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>AHA 评估（高光 / 顿悟 / 进步）</li>
+            <li>MAP 评估（市场 / 获客 / 壁垒）</li>
+            <li>价值总分 + 短板清单</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day6</span>
+          <span class="atitle">🧪 花小钱快速试错</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-exam</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="帮我设计一个 7 天内、预算 500 元以内的最小验证实验，并给出 go / no-go / pivot 的判定线。">帮我设计一个 7 天内、预算 500 元以内的最小验证实验，并给出 go / no-go / pivot 的判定线。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我要验证______这个假设，帮我设计最小实验（时间/成本/指标/判定线），并给 go / pivot / no-go 建议。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">先写清「什么数据算失败」再去跑，不然永远觉得还有希望。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>必须验证的关键假设清单</li>
+            <li>最小实验设计（成本 / 周期 / 指标）</li>
+            <li>判定线 + go / pivot / no-go 建议</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day7</span>
+          <span class="atitle">🎤 三句话讲清想法</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-pitch</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="帮我写 30 秒 / 60 秒 / 5 分钟三档演讲，并预演 5 个最可能被追问的问题。">帮我写 30 秒 / 60 秒 / 5 分钟三档演讲，并预演 5 个最可能被追问的问题。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我要向______（投资人/领导/客户）讲______项目，帮我生成三档时长演讲 + 常见追问与回答。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">先把 30 秒版讲给朋友听，他听不懂就重写，别自我感动。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>30 秒 / 60 秒 / 5 分钟三档脚本</li>
+            <li>追问预演与应答话术</li>
+            <li>一页呈现卡</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day8</span>
+          <span class="atitle">💰 设计赚钱的方式</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-business</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">在 WorkBuddy 直接说下面这句话，或打开「Eureka 创新教练团」专家。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="用精益画布帮我梳理商业模式，对比 2-3 种收入模式，并测算定价区间。">用精益画布帮我梳理商业模式，对比 2-3 种收入模式，并测算定价区间。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我的产品是______，目标用户是______，帮我用精益画布设计商业模式，对比 2-3 种变现方式并测算定价。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">先想清楚「谁付钱、为什么现在付」，再谈定价。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>精益画布（问题 / 方案 / 客群 / 渠道 / 收入 / 成本）</li>
+            <li>2–3 种商业模式对比</li>
+            <li>定价区间测算 + 商业模式卡</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="arow">
+        <summary>
+          <span class="aday">Day9</span>
+          <span class="atitle">🎯 串成你自己的方法</span>
+          <span class="awhere">在 WorkBuddy 搜 <code>eureka-coach</code> 或 <code>eureka-pro-automation</code></span>
+          <span class="aplus">+</span>
+        </summary>
+        <div class="abody">
+          <div class="ahow">卡住了就用 <code>eureka-coach</code> 定位卡点；想从选题到变现完整跑一遍，用 <code>eureka-pro-automation</code>（一句话启动全流程）。</div>
+          <div class="alabel">直接说这句（点一下复制）</div>
+          <button class="acmd" data-cmd="我卡在______，帮我判断这属于 RISE 哪个阶段，并给一个今天就能做的最小动作。">我卡在______，帮我判断这属于 RISE 哪个阶段，并给一个今天就能做的最小动作。<span class="copyhint">点击复制</span></button>
+          <div class="alabel">照抄模板</div>
+          <div class="atpl">我现在的进展是______，卡在______。帮我定位卡点属于哪一步，给出下一步最小动作。</div>
+          <div class="alabel">今天就能做</div>
+          <div class="apractice">把前 8 天的产出丢给它，让它帮你串成一页纸看板，下次直接复用。</div>
+          <div class="alabel">你会拿到</div>
+          <ul class="aout">
+            <li>阶段定位与卡点诊断</li>
+            <li>下一步最小动作</li>
+            <li>一页纸项目看板（可复用模板）</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+    <p class="assets-note">
+      这 9 天同步在小红书连载，每天一篇图文卡片，跟着走就行 📕<br>
+      <a class="btn-xhs" href="https://www.xiaohongshu.com/discovery/item/6aaa5373000000002803a511?app_platform=android&amp;ignoreEngage=true&amp;app_version=9.46.0&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBKnx0XU0VYTCjeYDGEDyahSIyTMhtRKmtNleeCCR9eEk%3D&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=ODs6N0dLODw2NzUyOTgwNjdGOTk5Oj9A&amp;apptime=1789547749&amp;share_id=4ae5638a23de4147b3e4cbc24be9c30f&amp;share_channel=wechat&amp;track_code=omaZxUP0kk#pushState" target="_blank">📕 去小红书看 9 天连载</a>
+    </p>
+  </div>
+</section>
+
 <section id="stack">
   <div class="wrap">
-    <div class="kicker">THREE LAYERS</div>
-    <h2>一个方法论，三种承载</h2>
-    <p class="lead">Eureka 不是单个工具，而是一套完整体系：内核是方法论，中间是可上手的工具，最外层是随时陪跑的 AI 教练。</p>
+    <div class="kicker">FIVE LAYERS</div>
+    <h2>一个方法论，五层产品系统</h2>
+    <p class="lead">Eureka 不是单个工具，而是一套完整体系：内核是方法论，中间是工具与 AI 教练，再往外是可以带回家的实体工具箱，以及有人带着做完的工作坊。<br>下面三层全部免费自助；<b>往上两层是给要深度用的人</b> —— <a href="#deliver" style="color:var(--brand);font-weight:600">看实体与服务 →</a></p>
     <div class="layers">
       <div class="layer">
         <div class="lv">第 1 层 · 内核</div>
@@ -185,6 +463,11 @@
         <p>用户画像与虚拟人实验室，把模糊的"目标用户"变成可对话、可验证的具体的人。</p>
         <span class="go">试试看 →</span>
       </a>
+      <a class="card" href="https://boardmix.cn/app/share/CAE.CK-irAwgASoQfteBVLflBoG-IxbwZCekPjAGQAE/jP2Yx2" target="_blank">
+        <h3>Eureka Canvas <span class="tag free">免费</span></h3>
+        <p>boardmix 在线画布「EUREKA RISE」：RISE 四阶段铺在一张白板上，个人梳理、小组共创、线上 workshop 都能直接用。</p>
+        <span class="go">打开画布 →</span>
+      </a>
     </div>
   </div>
 </section>
@@ -217,7 +500,38 @@
   </div>
 </section>
 
-<section class="alt" id="rise">
+<section class="alt" id="deliver">
+  <div class="wrap">
+    <div class="kicker">DEEP DELIVERY</div>
+    <h2>实体与服务：把方法带回家，有人带着做完</h2>
+    <p class="lead">免费的部分能带你走一遍。如果你要带团队做、要拿去给客户讲、或者想要一套能反复用的实体工具，这两层是为你准备的。</p>
+    <div class="grid2">
+      <a class="card" href="https://boardmix.cn/app/share/CAE.CK-irAwgASoQfteBVLflBoG-IxbwZCekPjAGQAE/jP2Yx2" target="_blank">
+        <h3>Eureka Canvas <span class="tag free">免费</span></h3>
+        <p>boardmix 在线画布「EUREKA RISE」：四阶段铺在一张白板上，个人梳理、小组共创、线上 workshop 都能直接打开就用。</p>
+        <span class="go">打开画布 →</span>
+      </a>
+      <div class="card" style="cursor:default">
+        <h3>Eureka 创新工具箱 <span class="tag pro">实体 · 数字版筹备中</span></h3>
+        <p>盒装版含 4 个小产品模块、A5 便携手册、讲师手册、案例实践手册、4 模块课件与全套工具卡，包装与印刷文件已全部就绪。数字版（卡片 PDF + 手册 + 画布模板）正在打包。</p>
+        <span class="go" style="color:var(--muted)">数字版即将上线 · 可先预约 →</span>
+      </div>
+      <div class="card" style="cursor:default">
+        <h3>Eureka 工作坊 <span class="tag">2 小时 · 线上/线下</span></h3>
+        <p>有人带着做完一遍：现场分组、用工具卡推进、当天产出一份团队报告。配讲师手册、检核表与全套课件，适合团队共创与公开课。</p>
+        <span class="go" style="color:var(--muted)">第一期筹备中 · 可预约 →</span>
+      </div>
+      <div class="card" style="cursor:default">
+        <h3>企业内训 <span class="tag">1–2 天 · 定制</span></h3>
+        <p>按你的行业与真实课题定制：课前调研、案例换成你们行业的、课后留一套可复用的课件与工具。适合创新团队、产品部门与内部创业项目。</p>
+        <span class="go" style="color:var(--muted)">按需求定制 · 欢迎来聊 →</span>
+      </div>
+    </div>
+    <!-- TODO：上面三张非链接卡片的预约入口，等用户提供邮箱 / 小红书主页 / 表单后替换成真实 href -->
+  </div>
+</section>
+
+<section id="rise">
   <div class="wrap center">
     <div class="kicker">THE METHOD</div>
     <h2>RISE：四步走完一次创新</h2>
@@ -231,7 +545,7 @@
   </div>
 </section>
 
-<section id="scene">
+<section class="alt" id="scene">
   <div class="wrap">
     <div class="kicker">WHO IT'S FOR</div>
     <h2>谁在用 Eureka</h2>
@@ -256,7 +570,7 @@
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
     <div class="cta">
       <h2>先别急着报班，自己走一遍试试</h2>
@@ -269,9 +583,33 @@
 <footer>
   <div class="wrap">
     Eureka · RISE 创新方法论 &nbsp;|&nbsp; 中文 / English &nbsp;|&nbsp; MIT License<br>
-    <span style="opacity:.7">创新不该是少数人的特权</span>
+    <span style="opacity:.7">创新不该是少数人的特权</span><br>
+    <span style="opacity:.55">产品系统 v1 · 更新于 2026-09-18</span>
   </div>
 </footer>
+
+<script>
+  // 点击指令区复制文本（9 天资产卡片）
+  document.querySelectorAll('.acmd').forEach(function (el) {
+    el.addEventListener('click', function () {
+      var text = el.getAttribute('data-cmd') || '';
+      var hint = el.querySelector('.copyhint');
+      var done = function () {
+        if (!hint) return;
+        hint.textContent = '已复制 ✓';
+        setTimeout(function () { hint.textContent = '点击复制'; }, 1500);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, done);
+      } else {
+        var ta = document.createElement('textarea');
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch (e) {}
+        document.body.removeChild(ta); done();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
